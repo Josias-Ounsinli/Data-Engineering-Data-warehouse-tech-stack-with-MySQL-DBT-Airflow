@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-remote
+['remote "dvc-remote"']
+    url = /home/jds98/10 Academy/Week-5/Data-Engineering-Data-warehouse-tech-stack-with-MySQL-DBT-Airflow/dvc-storage
