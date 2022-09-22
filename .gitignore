@@ -1,2 +1,4 @@
 env/
 dvc-storage/
+data/cars_table.csv
+data/trajectories_table.csv
