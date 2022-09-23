@@ -1,0 +1,25 @@
+[2022-09-23T01:03:14.841+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.load_tables manual__2022-09-23T01:03:11.908315+00:00 [queued]>
+[2022-09-23T01:03:14.867+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.load_tables manual__2022-09-23T01:03:11.908315+00:00 [queued]>
+[2022-09-23T01:03:14.867+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-23T01:03:14.867+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-09-23T01:03:14.867+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-23T01:03:14.937+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): load_tables> on 2022-09-23 01:03:11.908315+00:00
+[2022-09-23T01:03:14.949+0000] {standard_task_runner.py:54} INFO - Started process 1653 to run task
+[2022-09-23T01:03:14.953+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'loading_data', 'load_tables', 'manual__2022-09-23T01:03:11.908315+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/load_data.py', '--cfg-path', '/tmp/tmp296rsb3h']
+[2022-09-23T01:03:14.953+0000] {standard_task_runner.py:83} INFO - Job 122: Subtask load_tables
+[2022-09-23T01:03:14.955+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/load_data.py
+[2022-09-23T01:03:15.961+0000] {task_command.py:384} INFO - Running <TaskInstance: loading_data.load_tables manual__2022-09-23T01:03:11.908315+00:00 [running]> on host 211e88f8c2ad
+[2022-09-23T01:03:16.246+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=loading_data
+AIRFLOW_CTX_TASK_ID=load_tables
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-23T01:03:11.908315+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-23T01:03:11.908315+00:00
+[2022-09-23T01:03:16.777+0000] {logging_mixin.py:117} INFO - Successfull
+[2022-09-23T01:03:16.779+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-09-23T01:03:16.803+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=loading_data, task_id=load_tables, execution_date=20220923T010311, start_date=20220923T010314, end_date=20220923T010316
+[2022-09-23T01:03:16.920+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2022-09-23T01:03:17.007+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

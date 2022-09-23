@@ -1,0 +1,42 @@
+[2022-09-22T21:16:35.943+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.create_tables manual__2022-09-22T21:16:32.936176+00:00 [queued]>
+[2022-09-22T21:16:35.969+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.create_tables manual__2022-09-22T21:16:32.936176+00:00 [queued]>
+[2022-09-22T21:16:35.970+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-22T21:16:35.970+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-09-22T21:16:35.971+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-22T21:16:36.000+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): create_tables> on 2022-09-22 21:16:32.936176+00:00
+[2022-09-22T21:16:36.009+0000] {standard_task_runner.py:54} INFO - Started process 17131 to run task
+[2022-09-22T21:16:36.013+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'loading_data', 'create_tables', 'manual__2022-09-22T21:16:32.936176+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/load_data.py', '--cfg-path', '/tmp/tmpx2xp4ysm']
+[2022-09-22T21:16:36.014+0000] {standard_task_runner.py:83} INFO - Job 51: Subtask create_tables
+[2022-09-22T21:16:36.015+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/load_data.py
+[2022-09-22T21:16:38.332+0000] {task_command.py:384} INFO - Running <TaskInstance: loading_data.create_tables manual__2022-09-22T21:16:32.936176+00:00 [running]> on host c1ab2cb1bbac
+[2022-09-22T21:16:38.554+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=loading_data
+AIRFLOW_CTX_TASK_ID=create_tables
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-22T21:16:32.936176+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-22T21:16:32.936176+00:00
+[2022-09-22T21:16:38.571+0000] {logging_mixin.py:117} INFO - (psycopg2.errors.SyntaxError) syntax error at or near "AUTO_INCREMENT"
+LINE 3:     "id" INT NOT NULL AUTO_INCREMENT,
+                              ^
+
+[SQL: CREATE TABLE IF NOT EXISTS TRAJECTORIES
+(
+    "id" INT NOT NULL AUTO_INCREMENT,
+    "track_id" TEXT NOT NULL,
+    "lat" TEXT NOT NULL,
+    "lon" TEXT DEFAULT NULL,
+    "speed" TEXT DEFAULT NULL,
+    "lon_acc" TEXT DEFAULT NULL,
+    "lat_acc" TEXT DEFAULT NULL,
+    "time" TEXT DEFAULT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY ('track_id') REFERENCES CARS('track_id')
+);]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2022-09-22T21:16:38.571+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-09-22T21:16:38.595+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=loading_data, task_id=create_tables, execution_date=20220922T211632, start_date=20220922T211635, end_date=20220922T211638
+[2022-09-22T21:16:38.678+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2022-09-22T21:16:38.750+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
