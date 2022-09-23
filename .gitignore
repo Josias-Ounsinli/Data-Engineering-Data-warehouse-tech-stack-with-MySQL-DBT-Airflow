@@ -2,3 +2,5 @@ env/
 dvc-storage/
 data/cars_table.csv
 data/trajectories_table.csv
+airflow/dags/include/cars_table.csv
+airflow/dags/include/trajectories_table.csv

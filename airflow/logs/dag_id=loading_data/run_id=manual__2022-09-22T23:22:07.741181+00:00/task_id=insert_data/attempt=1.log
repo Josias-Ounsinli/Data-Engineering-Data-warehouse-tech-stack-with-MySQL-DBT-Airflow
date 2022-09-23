@@ -1,0 +1,25 @@
+[2022-09-22T23:22:14.017+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.insert_data manual__2022-09-22T23:22:07.741181+00:00 [queued]>
+[2022-09-22T23:22:14.041+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: loading_data.insert_data manual__2022-09-22T23:22:07.741181+00:00 [queued]>
+[2022-09-22T23:22:14.042+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-22T23:22:14.042+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-09-22T23:22:14.043+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-22T23:22:14.076+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): insert_data> on 2022-09-22 23:22:07.741181+00:00
+[2022-09-22T23:22:14.083+0000] {standard_task_runner.py:54} INFO - Started process 21701 to run task
+[2022-09-22T23:22:14.089+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'loading_data', 'insert_data', 'manual__2022-09-22T23:22:07.741181+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/load_data.py', '--cfg-path', '/tmp/tmpixjchbmn']
+[2022-09-22T23:22:14.089+0000] {standard_task_runner.py:83} INFO - Job 66: Subtask insert_data
+[2022-09-22T23:22:14.090+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/load_data.py
+[2022-09-22T23:22:14.683+0000] {task_command.py:384} INFO - Running <TaskInstance: loading_data.insert_data manual__2022-09-22T23:22:07.741181+00:00 [running]> on host c1ab2cb1bbac
+[2022-09-22T23:22:15.347+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=loading_data
+AIRFLOW_CTX_TASK_ID=insert_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-22T23:22:07.741181+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-22T23:22:07.741181+00:00
+[2022-09-22T23:22:15.445+0000] {logging_mixin.py:117} INFO - Failed  ---- [Errno 2] No such file or directory: '../../data/cars_table.csv'
+[2022-09-22T23:22:15.446+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-09-22T23:22:15.488+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=loading_data, task_id=insert_data, execution_date=20220922T232207, start_date=20220922T232214, end_date=20220922T232215
+[2022-09-22T23:22:15.595+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2022-09-22T23:22:15.754+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS TRAJECTORIES
 (
-    "id" INT NOT NULL AUTO_INCREMENT,
+    "id" SERIAL NOT NULL,
     "track_id" TEXT NOT NULL,
     "lat" TEXT NOT NULL,
     "lon" TEXT DEFAULT NULL,
@@ -9,5 +9,8 @@ CREATE TABLE IF NOT EXISTS TRAJECTORIES
     "lat_acc" TEXT DEFAULT NULL,
     "time" TEXT DEFAULT NULL,
     PRIMARY KEY ("id"),
-    FOREIGN KEY ('track_id') REFERENCES CARS('track_id')
+    CONSTRAINT fk_CARS
+        FOREIGN KEY("track_id") 
+            REFERENCES CARS(track_id)
+            ON DELETE CASCADE
 );
