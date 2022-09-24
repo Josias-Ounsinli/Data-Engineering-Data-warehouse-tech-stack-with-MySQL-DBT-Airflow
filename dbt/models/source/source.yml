@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: first_transformation
+    database: railway
+    description: "A starter dbt model"
+    tables:
+      - name: cars
+      - name: trajectories
+
+
+  # - name: my_second_dbt_model
+  #   description: "A starter dbt model"
+  #   columns:
+  #     - name: id
+  #       description: "The primary key for this table"
+  #       tests:
+  #         - unique
+  #         - not_null
